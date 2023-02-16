@@ -10,7 +10,7 @@ from django.utils import timezone
 # Create your views here.
 
 
-openai.api_key = "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"
+
 
 @api_view(['GET'])
 def index(request):
