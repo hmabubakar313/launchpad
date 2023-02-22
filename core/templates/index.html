@@ -10,13 +10,11 @@
     <h1>Product</h1>
     {{x}}
 
-    <form action='/product/' method="POST">
-        {% csrf_token %}
-        <input type="text" name="title" id="text" placeholder="Enter your title here " required=yes>
-        <br>
-        <input type="text" name="description" id="size" placeholder="Enter your description here " required=yes>
-        <button type="submit">Submit</button>
+    <h2>images</h2>
+    {% comment %} inser url variable into images tag {% endcomment %}
+    <img src="{{url}}" alt="">
+    
 
-    </form>
+   
 </body>
 </html>

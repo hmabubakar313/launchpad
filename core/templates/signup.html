@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section id="signUp">
+    <img src="images/el-1.png" alt="elips" class="img-fluid elips-1">
+    <img src="images/el-2.png" alt="elips" class="img-fluid elips-2">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="signUpLeft">
+                    <h2 class="signUpTitle">
+                        <span>Revolutionizing</span> Product Design <span>with AI Technology</span>
+                    </h2>
+                    <div class="contactBanner">
+                        <img src="images/contactBanner.png" alt="contactBanenr" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="signUpForm">
+                    <form action="/signup/" method="POST">
+                        {% csrf_token %}
+                        <div class="formTop">
+                            <a href="#" class="btn active">
+                                Sign up
+                            </a>
+
+                            <a href="#" class="btn borderNone">
+                                Sign In
+                            </a>
+                        </div>
+
+                        <div class="mainForm">
+
+                            <div class="singleInput">
+                                <label for="email" >
+                                    EMAIL ADDRESS
+                                </label>
+                                <input type="email" name="email" id="email" class="form-control">
+                            </div>
+
+                            <div class="singleInput">
+                                <label for="password">
+                                    PASSWORD
+                                </label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="">
+                            </div>
+
+                            <div class="singleInput">
+                                <input type="submit" value="Sign up" class="btn signUpBtn">
+                            </div>
+
+                            <p class="loginWith d-flex align-items-center justify-content-center">
+                                <img src="images/line.png" alt="line" class="img-fluid">
+                                <span class="px-3">
+                                    lOGIN WITH
+                                </span>
+                                <img src="images/line.png" alt="line" class="img-fluid">
+                            </p>
+
+                            <a href="#" class="googleLogin btn">
+                                <img src="images/google.png" alt="google" class="img-fluid">
+                                Google
+                            </a>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

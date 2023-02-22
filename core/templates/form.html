@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section id="bannerOne">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="sectionTitle">Streamlining Product Creation with AI-based Requirements Generation</h2>
+                <p class="sectionText">
+                    Discover how AI technology is transforming the way products are designed, helping businesses
+                    achieve new levels of efficiency and innovation.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <div class="formInnerContents">
+                    <form action="/product/" method="POST">
+                        {% csrf_token %}
+                        <div class="singleInput">
+                            <label for="title">Give us a one or two sentence pitch about your product idea.</label>
+                            <textarea name="title" id="" cols="30" rows="2" placeholder="Write title  here"
+                                class="form-control"></textarea>
+                        </div>
+
+                        <div class="singleInput singleInputtwo">
+                            <label for="title">Give us more detail on the product. </label>
+                            <textarea name="description" id="" cols="30" rows="5" placeholder="Write specification here"
+                                class="form-control"></textarea>
+                        </div>
+                        <div class="text-center pt-5">
+
+                            <input type="submit" value="Next" class="NextBtn btn">
+
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
